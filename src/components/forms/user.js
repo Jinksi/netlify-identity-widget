@@ -34,6 +34,7 @@ export default class UserForm extends Component {
       <form
         onsubmit={this.handleLogin}
         className={`form ${saving ? "disabled" : ""}`}
+        id="form"
       >
         {message && <Message type={message} />}
         {page.name && (
@@ -65,7 +66,7 @@ export default class UserForm extends Component {
                 name="email"
                 value={email}
                 placeholder="Email"
-                autocomplete="email"
+                autocomplete="username email"
                 autocapitalize="off"
                 required
                 oninput={this.handleInput}
