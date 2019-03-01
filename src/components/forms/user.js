@@ -37,6 +37,7 @@ export default class UserForm extends Component {
                 name="name"
                 value={name}
                 placeholder="Name"
+                autocomplete="name"
                 autocapitalize="off"
                 required
                 oninput={this.handleInput}
@@ -55,6 +56,7 @@ export default class UserForm extends Component {
                 name="email"
                 value={email}
                 placeholder="Email"
+                autocomplete="email"
                 autocapitalize="off"
                 required
                 oninput={this.handleInput}
@@ -71,6 +73,7 @@ export default class UserForm extends Component {
                 className="formControl"
                 type="password"
                 name="password"
+                autocomplete="current-password"
                 value={password}
                 placeholder="Password"
                 required
