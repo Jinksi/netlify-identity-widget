@@ -15,6 +15,15 @@ export default class UserForm extends Component {
   handleLogin = e => {
     e.preventDefault();
     this.props.onSubmit(this.state);
+    if (window.PasswordCredential) {
+      const c = new PasswordCredential({
+        id: this.state.email,
+        name: this.state.name,
+        email: this.state.email,
+        password: this.state.password
+      });
+      return navigator.credentials.store(c);
+    }
   };
 
   render() {
