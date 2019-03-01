@@ -39,11 +39,11 @@ export default class UserForm extends Component {
         {message && <Message type={message} />}
         {page.name && (
           <div className="formGroup">
-            <label>
+            <label for="name">
               <span className="visuallyHidden">Enter your name</span>
               <input
                 className="formControl"
-                type="name"
+                type="text"
                 name="name"
                 value={name}
                 placeholder="Name"
@@ -58,7 +58,7 @@ export default class UserForm extends Component {
         )}
         {page.email && (
           <div className="formGroup">
-            <label>
+            <label for="email">
               <span className="visuallyHidden">Enter your email</span>
               <input
                 className="formControl"
@@ -77,7 +77,7 @@ export default class UserForm extends Component {
         )}
         {page.password && (
           <div className="formGroup">
-            <label>
+            <label for="password">
               <span className="visuallyHidden">Enter your password</span>
               <input
                 className="formControl"
